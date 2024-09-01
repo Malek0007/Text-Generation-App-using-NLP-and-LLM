@@ -1,0 +1,14 @@
+voiture:car
+accident:accident
+camion:truck
+moto:motorcycle
+bus:bus
+panne:breakdown
+collision:collision
+route:road
+blessure:injury
+ambulance:ambulance
+police:police
+chauffeur:driver
+feu:fire
+urgence:emergency

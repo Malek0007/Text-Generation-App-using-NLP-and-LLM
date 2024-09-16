@@ -57,7 +57,9 @@ Sentiment Extraction:
 For sentiment extraction, we use a pipeline from Hugging Face, pipeline('sentiment-analysis'), which is based on a pretrained model capable of predicting the sentiment of the text.
 
 
+**The Text Generation Stage**
 
+The text generation stage uses two pretrained generation models to produce texts based on a given prompt. We first load the model using the Hugging Face Transformers library, specifically the "distilbert/distilgpt2" model. Then, we utilize OpenAI's GPT-4 model for further text generation.
 
 
 

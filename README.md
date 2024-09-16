@@ -38,4 +38,19 @@ For the text correction stage, a function is used to correct typographical error
 
 For the text translation stage, we start by translating individual words from a file named car-accident-translation, which contains a list of French words and their English translations related to accidents. If a word is not found in this file, we use the Google Translate API to translate the individual word into English, as it supports translation between many languages. If the translation via the API is not sufficient for the context, we use the pre-trained MarianMTModel from Hugging Face to provide a more contextual and accurate translation.
 
+**Text Filtering Stage**
+
+The objective of this stage is to remove all irrelevant or out-of-context sentences using a classification model. The model identifies and filters out non-pertinent sentences in the text.
+
+Data Collection and Labeling: Data is collected and labeled for training.
+
+Data Splitting, Preprocessing, and Tokenization: We use DistilBertTokenizerFast pretrained on 'distilbert-base-uncased' to tokenize the texts.
+
+Model Configuration and Fine-Tuning: We configure and fine-tune a classification model, such as DistilBERT, to accurately identify irrelevant content.
+
+
+
+
+
+
 

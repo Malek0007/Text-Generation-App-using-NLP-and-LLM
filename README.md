@@ -27,8 +27,14 @@ Date extraction is performed using the regex library, while location extraction 
 <img src="static/images/Date_place.png" alt="Architecture Diagram" width="400"/>
 **Text Cleaning Stage**
 
-Text cleaning is an essential step in natural language processing. In this project, the cleaning process involves removing URLs, email addresses, arbitrary numbers, HTML tags, and any other unnecessary information. It also includes removing words that are not found in the dictionary, utilizing the BERT model from Hugging Face.
+Text cleaning is an essential step in natural language processing. In this project, the cleaning process involves removing URLs, email addresses, arbitrary numbers, HTML tags, and any other unnecessary information. It also includes removing words that are not found in the dictionary, using the BERT model from Hugging Face.
 
 **Text Correction Stage**
 
 For the text correction stage, a function is used to correct typographical errors, as well as grammar and spelling mistakes. This is done using specific tools depending on the language: pyspellchecker for French and TextBlob for English.
+
+**Text Translation Stage**
+
+For the text translation stage, we start by translating individual words from a file named car-accident-translation, which contains a list of French words and their English translations related to accidents. If a word is not found in this file, we use the Google Translate API to translate the individual word into English, as it supports translation between many languages. If the translation via the API is not sufficient for the context, we use the pre-trained MarianMTModel from Hugging Face to provide a more contextual and accurate translation.
+
+

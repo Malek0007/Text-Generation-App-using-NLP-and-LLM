@@ -49,6 +49,18 @@ Data Splitting, Preprocessing, and Tokenization: We use DistilBertTokenizerFast 
 Model Configuration and Fine-Tuning: We configure and fine-tune a classification model, such as DistilBERT, to accurately identify irrelevant content.
 
 
+**Extraction of Vehicle Type and Sentiments**
+
+The extraction of the vehicle type and sentiment is performed after the text correction and translation to ensure accurate identification of vehicles in English. We provided a file listing all vehicle types in English, allowing for reliable and precise extraction of vehicle-related information from the translated text.
+
+Sentiment Extraction:
+For sentiment extraction, we use a pipeline from Hugging Face, pipeline('sentiment-analysis'), which is based on a pretrained model capable of predicting the sentiment of the text.
+
+
+
+
+
+
 
 
 

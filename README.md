@@ -37,6 +37,7 @@ For the text correction stage, a function is used to correct typographical error
 **Text Translation Stage**
 
 For the text translation stage, we start by translating individual words from a file named car-accident-translation, which contains a list of French words and their English translations related to accidents. If a word is not found in this file, we use the Google Translate API to translate the individual word into English, as it supports translation between many languages. If the translation via the API is not sufficient for the context, we use the pre-trained MarianMTModel from Hugging Face to provide a more contextual and accurate translation.
+<img src="static/images/Demo_corr_et_trad.png" alt="Architecture Diagram" width="400"/>
 
 **Text Filtering Stage**
 
@@ -47,7 +48,7 @@ Data Collection and Labeling: Data is collected and labeled for training.
 Data Splitting, Preprocessing, and Tokenization: We use DistilBertTokenizerFast pretrained on 'distilbert-base-uncased' to tokenize the texts.
 
 Model Configuration and Fine-Tuning: We configure and fine-tune a classification model, such as DistilBERT, to accurately identify irrelevant content.
-
+<img src="static/images/Filtration.png" alt="Architecture Diagram" width="400"/>
 
 **Extraction of Vehicle Type and Sentiments**
 
@@ -55,13 +56,13 @@ The extraction of the vehicle type and sentiment is performed after the text cor
 
 Sentiment Extraction:
 For sentiment extraction, we use a pipeline from Hugging Face, pipeline('sentiment-analysis'), which is based on a pretrained model capable of predicting the sentiment of the text.
-
+<img src="static/images/sentiment_vehic.png" alt="Architecture Diagram" width="400"/>
 
 **The Text Generation Stage**
 
 The text generation stage uses two pretrained generation models to produce texts based on a given prompt. We first load the model using the Hugging Face Transformers library, specifically the "distilbert/distilgpt2" model. Then, we utilize OpenAI's GPT-4 model for further text generation.
 
-
+<img src="static/images/Gen.png" alt="Architecture Diagram" width="400"/>
 
 
 

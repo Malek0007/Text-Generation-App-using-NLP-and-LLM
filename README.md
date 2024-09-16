@@ -5,6 +5,7 @@ The project is a text generation application that processes accident description
 The text generation application is structured around two main components:
 - Text Processing
 - Text Generation
+![Architecture Diagram](static/images/Front.png)
 
 The process begins with text processing, where raw text is cleaned and prepared. Then, text generation uses the processed text as a base to produce generated content.
 

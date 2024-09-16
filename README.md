@@ -1,8 +1,8 @@
 ﻿# Text-Generation-App-using-NLP-and-LLM
 The project is a text generation application that processes accident descriptions using Natural Language Processing (NLP) and Large Language Model (LLM) techniques.
 The text generation application is structured around two main components:
-• Text Processing
-• Text Generation
+• Text Processing //
+• Text Generation //
 
 The process begins with text processing, where raw text is cleaned and prepared. Then, text generation uses the processed text as a base to produce generated content.
 

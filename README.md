@@ -25,6 +25,7 @@ This first stage involves extracting the date and location of the accident from 
 Date extraction is performed using the regex library, while location extraction is achieved through Named Entity Recognition (NER) in NLP.
 
 <img src="static/images/Date_place.png" alt="Architecture Diagram" width="400"/>
+
 **Text Cleaning Stage**
 
 Text cleaning is an essential step in natural language processing. In this project, the cleaning process involves removing URLs, email addresses, arbitrary numbers, HTML tags, and any other unnecessary information. It also includes removing words that are not found in the dictionary, using the BERT model from Hugging Face.

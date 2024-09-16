@@ -18,10 +18,17 @@ Below is the general architecture of the application development in Visual Studi
   - Filtering Stage
   - Generation Stage
 
-**1-****Information Extraction Stage**
+**Information Extraction Stage**
 
 This first stage involves extracting the date and location of the accident from the description. It is considered the initial step to ensure that these essential pieces of information are not removed during the subsequent text cleaning process.
 
 Date extraction is performed using the regex library, while location extraction is achieved through Named Entity Recognition (NER) in NLP.
 
 <img src="static/images/Date_place.png" alt="Architecture Diagram" width="400"/>
+**Text Cleaning Stage**
+
+Text cleaning is an essential step in natural language processing. In this project, the cleaning process involves removing URLs, email addresses, arbitrary numbers, HTML tags, and any other unnecessary information. It also includes removing words that are not found in the dictionary, utilizing the BERT model from Hugging Face.
+
+**Text Correction Stage**
+
+For the text correction stage, a function is used to correct typographical errors, as well as grammar and spelling mistakes. This is done using specific tools depending on the language: pyspellchecker for French and TextBlob for English.

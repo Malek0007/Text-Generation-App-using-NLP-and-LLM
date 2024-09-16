@@ -18,4 +18,10 @@ Below is the general architecture of the application development in Visual Studi
   - Filtering Stage
   - Generation Stage
 
-![Architecture Diagram](path/to/your/image.png)
+**1-****Information Extraction Stage**
+
+This first stage involves extracting the date and location of the accident from the description. It is considered the initial step to ensure that these essential pieces of information are not removed during the subsequent text cleaning process.
+
+Date extraction is performed using the regex library, while location extraction is achieved through Named Entity Recognition (NER) in NLP.
+
+<img src="static/images/Date_place.png" alt="Architecture Diagram" width="400"/>
